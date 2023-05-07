@@ -1,5 +1,5 @@
 # Webhook endpoint for gRPC-Gateway
-Implementation for Webhook Endpoint for gRPC-Gateway (Eg.PayPal listener)
+Implementation for Webhook Endpoint for gRPC-Gateway (eg. PayPal listener...)
 ### Setup local development
 ####  How to generate code
 ```bash
