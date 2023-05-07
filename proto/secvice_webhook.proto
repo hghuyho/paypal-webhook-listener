@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+package pb;
+
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "google/protobuf/empty.proto";
+
+import "rpc_webhook.proto";
+
+option go_package = "grpc-gateway-webhook/pb";
+
+service WebhookService {
+  rpc PayPalWebhook(WebhookRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/webhook"
+      body: "body"  // this mapping is key for this to work
+    };
+  }
+}

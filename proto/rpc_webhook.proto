@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/protobuf/struct.proto";
+option go_package = "grpc-gateway-webhook/pb";
+
+
+message WebhookRequest {
+  google.protobuf.Struct body = 1;
+}

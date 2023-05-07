@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "grpc-gateway-webhook/pb";
+
+message PingRequest {
+}
+
+message PingResponse {
+  string message = 1;
+}

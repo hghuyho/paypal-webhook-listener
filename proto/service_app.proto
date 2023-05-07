@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/api/annotations.proto";
+
+import "rpc_healthcheck.proto";
+
+option go_package = "grpc-gateway-webhook/pb";
+
+service public_app {
+  rpc HealthCheck (PingRequest) returns (PingResponse) {
+    option (google.api.http) = {
+      get: "/v1/ping"
+    };
+  }
+}
